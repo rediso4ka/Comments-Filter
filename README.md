@@ -33,3 +33,5 @@ enum Label {
 The final touch is to write the *checkLabels* method, which will return a label for a comment on a set of text analyzers. checkLabels should return the first non-OK label in the order of a given set of analyzers, and OK if all analyzers returned OK.  
 
 As a result, implement the KeywordAnalyzer, SpamAnalyzer, NegativeTextAnalyzer and TooLongTextAnalyzer classes and the checkLabels method. TextAnalyzer and Label are already connected, you will not need extra imports.
+
+*P.S. source - https://stepik.org/lesson/14513/step/9?unit=4147*
