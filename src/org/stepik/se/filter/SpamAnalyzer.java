@@ -5,4 +5,5 @@ public class SpamAnalyzer implements TextAnalyzer{
     public Label processText(String text) {
         return null;
     }
+
 }
