@@ -9,12 +9,13 @@ public class NegativeTextAnalyzer extends KeywordAnalyzer implements TextAnalyze
 
     @Override
     protected String[] getKeywords() {
-        return new String[0];
+        String[] smiles = {":(", "=(", ":|"};
+        return smiles;
     }
 
     @Override
     protected Label getLabel() {
-        return null;
+        return Label.NEGATIVE_TEXT;
     }
 
     @Override
