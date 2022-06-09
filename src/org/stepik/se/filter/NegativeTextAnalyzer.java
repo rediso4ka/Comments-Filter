@@ -19,7 +19,7 @@ public class NegativeTextAnalyzer extends KeywordAnalyzer implements TextAnalyze
 
     @Override
     public Label processText(String text) {
-        for (String smile: getKeywords()){
+        for (String smile: getKeywords()) {
             if (text.contains(smile)) {
                 return getLabel();
             }
