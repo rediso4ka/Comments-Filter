@@ -9,8 +9,7 @@ public class NegativeTextAnalyzer extends KeywordAnalyzer implements TextAnalyze
 
     @Override
     protected String[] getKeywords() {
-        String[] smiles = {":(", "=(", ":|"};
-        return smiles;
+        return new String[]{":(", "=(", ":|"};
     }
 
     @Override
@@ -20,6 +19,11 @@ public class NegativeTextAnalyzer extends KeywordAnalyzer implements TextAnalyze
 
     @Override
     public Label processText(String text) {
-        return null;
+        for (String smile: getKeywords()){
+            if (text.contains(smile)) {
+                return getLabel();
+            }
+        }
+        return Label.OK;
     }
 }
