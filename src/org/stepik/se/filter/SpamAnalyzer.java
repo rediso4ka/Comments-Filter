@@ -20,6 +20,11 @@ public class SpamAnalyzer extends KeywordAnalyzer implements TextAnalyzer{
 
     @Override
     public Label processText(String text) {
-        return null;
+        for (String keyword: getKeywords()){
+            if (text.contains(keyword)){
+                return getLabel();
+            }
+        }
+        return Label.OK;
     }
 }
