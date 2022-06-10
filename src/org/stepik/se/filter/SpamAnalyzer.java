@@ -1,8 +1,8 @@
 package org.stepik.se.filter;
 
-public class SpamAnalyzer extends KeywordAnalyzer implements TextAnalyzer{
+public class SpamAnalyzer extends KeywordAnalyzer {
 
-    String[] keywords;
+    private final String[] keywords;
 
     public SpamAnalyzer (String[] keywords) {
         this.keywords = keywords;
@@ -18,13 +18,4 @@ public class SpamAnalyzer extends KeywordAnalyzer implements TextAnalyzer{
         return Label.SPAM;
     }
 
-    @Override
-    public Label processText(String text) {
-        for (String keyword: getKeywords()) {
-            if (text.contains(keyword)) {
-                return getLabel();
-            }
-        }
-        return Label.OK;
-    }
 }
